@@ -25,9 +25,8 @@ struct Color {
 
 impl Display for Color {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        write!(f, "RGB ({}, {}, {}) 0x{:02X}{:02X}{:02X}",
-               self.red, self.green, self.blue,
-               self.red, self.green, self.blue)
+        write!(f, "RGB ({r}, {g}, {b}) 0x{r:0>2X}{g:0>2X}{b:0>2X}",
+               r=self.red, g=self.green, b=self.blue)
     }
 }
 
